@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student page</title>
+</head>
+<body>
+ <h1> hello {{ user.username }} your role is student</h1>
+ <h1>  University:  {{ user.university }}</h1>
+ <h1> First Name: {{ user.firstName }} </h1>
+ <h1> Last Name: {{ user.lastName }} </h1>
+ <a href="{% url 'index' %}">  
+    <button>Log Out</button>  
+  </a>
+
+</body>
+</html>
