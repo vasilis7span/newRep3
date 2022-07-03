@@ -1,19 +1,27 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>student page</title>
+    <link rel="stylesheet" href="{% static 'css/student.css' %}">
 </head>
-<body>
- <h1> hello {{ user.username }} your role is student</h1>
- <h1>  University:  {{ user.university }}</h1>
- <h1> First Name: {{ user.firstName }} </h1>
- <h1> Last Name: {{ user.lastName }} </h1>
+<body style="background-color:rgb(190, 189, 188);">
+  
+ <h1> Welcome {{ user.username }} ! </h1>
+ <h2> First Name: {{ user.firstName }} </h2>
+ <h2> Last Name: {{ user.lastName }} </h2>
+ <h2> University:  {{ user.university }}</h2>
+ <h2> City:  {{ user.city }}</h2>
+ <h2> Phone Number: {{ user.phone }}</h2>
+ <h2> Role: Student</h2>
+
  <a href="{% url 'index' %}">  
-    <button>Log Out</button>  
+  <button class="button">Log Out</button>  
   </a>
 
-  <button>Make application</button>
+  <a href="{% url 'pistop' %}"><button class="button">Make application</button> </a>
 
 </body>
 </html>
+

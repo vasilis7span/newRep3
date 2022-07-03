@@ -10,6 +10,8 @@ class User(AbstractUser):
     university = models.CharField(max_length=80, null=True)
     firstName = models.CharField(max_length=80, null=True)
     lastName = models.CharField(max_length=80, null=True)
+    phone = models.IntegerField(max_length=15, null=True)
+    city = models.CharField(max_length=50, null=True)
 
 
     

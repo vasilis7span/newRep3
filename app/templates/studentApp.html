@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student app</title>
+</head>
+
+<body style="background-color:rgb(190, 189, 188);">
+
+{% block content %}
+
+{% for x in my_data %}
+<br>
+{{x.firstName }}
+{{x.phone}}
+
+<form method="get">
+    <input type="submit" class="btn" value="Click" name="print_btn">
+</form>
+
+
+{% endfor %}
+<br>
+{% endblock content %}
+
+
+
+</body>
+</html>

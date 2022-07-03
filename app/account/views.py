@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import SignUpForm, LoginForm
 from django.contrib.auth import authenticate, login
+from .models import User
 # Create your views here.
 
 
@@ -44,11 +45,26 @@ def login_view(request):
     return render(request, 'login.html', {'form': form, 'msg': msg})
 
 
-def admin(request):
+def admin(request): 
     return render(request,'admin.html')
 
 
 def student(request):
     return render(request,'student.html')
+
+def pistop(request):
+    return render(request,'pistop.html')
+
+def studentApp(request):
+    my_data = User.objects.filter(firstName="test")
+    context={
+       
+      'my_data':my_data,
+    
+    } 
+    return render(request,'studentApp.html',context)
+
+
+    
 
 

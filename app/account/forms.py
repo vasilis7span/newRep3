@@ -73,6 +73,22 @@ class SignUpForm(UserCreationForm):
         )
     )
 
+    phone = forms.IntegerField(
+        widget= forms.NumberInput(
+            attrs={
+                "class": "form-control"
+            }
+        )
+    )
+
+    city = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                "class": "form-control"
+            }
+        )
+    )
+
     class Meta:
         model = User
-        fields = ('username', 'email', 'firstName', 'lastName', 'password1', 'password2', 'university', 'is_admin', 'is_student')
+        fields = ('username', 'email', 'firstName', 'lastName', 'password1', 'password2','phone', 'city', 'university', 'is_admin', 'is_student')
