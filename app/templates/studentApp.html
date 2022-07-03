@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>student app</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>student page</title>
+        <link rel="stylesheet" href="{% static 'css/student.css' %}">
+    </head>
 
 <body style="background-color:rgb(190, 189, 188);">
 
@@ -12,19 +13,24 @@
 
 {% for x in my_data %}
 <br>
-{{x.firstName }}
-{{x.phone}}
+<h2>First Name: {{x.firstName }}</h2>
+<h2>Last Name: {{x.lastName}}</h2>
+<h2>University: {{x.university}}</h2>
 
-<form method="get">
-    <input type="submit" class="btn" value="Click" name="print_btn">
-</form>
-
+<button onclick="myFunction()" id="alert-button" class="button">Accept</button>
+<p id="node-id"></p>
 
 {% endfor %}
 <br>
 {% endblock content %}
 
 
+<script>
+function myFunction() {
+    console.log("Accepted")
+    document.getElementById('node-id').innerHTML = "<h2>Accepted</h2>";
+}
 
+</script>
 </body>
 </html>

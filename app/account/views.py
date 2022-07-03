@@ -56,7 +56,7 @@ def pistop(request):
     return render(request,'pistop.html')
 
 def studentApp(request):
-    my_data = User.objects.filter(firstName="test")
+    my_data = User.objects.filter(firstName="vasilis")
     context={
        
       'my_data':my_data,
@@ -64,7 +64,9 @@ def studentApp(request):
     } 
     return render(request,'studentApp.html',context)
 
-
+def button(request):
+    print("hello")
+    return render(request,'studentApp.html')
     
 
 
