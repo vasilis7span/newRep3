@@ -12,6 +12,8 @@ class User(AbstractUser):
     lastName = models.CharField(max_length=80, null=True)
     phone = models.IntegerField(max_length=15, null=True)
     city = models.CharField(max_length=50, null=True)
+    has_applied = models.BooleanField('has_applied', default=False)
+
 
 
     
